@@ -13,6 +13,7 @@ export default class Fetch<TData, TParams extends any[]> {
     error: undefined,
   };
 
+  // 第一句注释
   constructor(
     public serviceRef: MutableRefObject<Service<TData, TParams>>,
     public options: Options<TData, TParams>,
