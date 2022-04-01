@@ -13,7 +13,6 @@ export default class Fetch<TData, TParams extends any[]> {
     error: undefined,
   };
 
-  // 第一句注释
   constructor(
     public serviceRef: MutableRefObject<Service<TData, TParams>>,
     public options: Options<TData, TParams>,
@@ -22,7 +21,7 @@ export default class Fetch<TData, TParams extends any[]> {
   ) {
     this.state = {
       ...this.state,
-      loading: !options.manual,
+      loading: !options.manual, // 有手动就不Loading,无手动就loading
       ...initState,
     };
   }

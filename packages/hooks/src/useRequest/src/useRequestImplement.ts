@@ -20,8 +20,9 @@ function useRequestImplement<TData, TParams extends any[]>(
     ...rest,
   };
 
+  // 最新网络请求函数
   const serviceRef = useLatest(service);
-
+  // 页面渲染更新
   const update = useUpdate();
 
   const fetchInstance = useCreation(() => {

@@ -2,6 +2,7 @@ import type { DependencyList } from 'react';
 import { useRef } from 'react';
 import depsAreSame from '../utils/depsAreSame';
 
+//  创建工厂函数实例
 export default function useCreation<T>(factory: () => T, deps: DependencyList) {
   const { current } = useRef({
     deps,
